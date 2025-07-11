@@ -50,14 +50,14 @@ const CityPage = () => {
       </div>
 
       <div className="grid gap-14">
-        <div className="flex flex-col lg:flex-row gap-4">
+        <div className="flex flex-col lg:flex-row gap-8">
           <CurrentWeather
             data={weatherQuery?.data}
             cityName={params?.cityName}
           />
           <HourlyTemperature data={forecastQuery.data} />
         </div>
-        <div className="grid gap-6 md:grid-cols-2 items-start">
+        <div className="grid gap-8 md:grid-cols-2 items-start">
           <WeatherDetails data={weatherQuery.data} />
           <WeatherForecast data={forecastQuery.data} />
         </div>
