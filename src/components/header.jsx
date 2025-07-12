@@ -8,7 +8,7 @@ const Header = () => {
   const isDark = theme === "dark";
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-18 items-center justify-between px-4">
+      <div className="container mx-auto flex h-18 items-center md:justify-between ">
         <Link to={"/"}>
           <img
             src="/Modern_Logo_with_Bold_Font_and_Dynamic_Design-removebg-preview.png"
@@ -16,7 +16,7 @@ const Header = () => {
             alt="BD Weather Logo"
           />
         </Link>
-        <div className="flex gap-4">
+        <div className="flex gap-2 ps-14 ">
           <CitySearch />
           <div
             className={`flex items-center cursor-pointer transition-transform duration-500 ${

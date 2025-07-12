@@ -8,7 +8,6 @@ import { HourlyTemperature } from "../components/hourly-temprature";
 import WeatherSkeleton from "../components/loading-skeleton";
 import { WeatherDetails } from "../components/weather-details";
 import { WeatherForecast } from "../components/weather-forecast";
-// import { FavoriteButton } from "@/components/favorite-button";
 
 const CityPage = () => {
   const [searchParams] = useSearchParams();
@@ -37,7 +36,7 @@ const CityPage = () => {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl text-yellow-500 font-bold tracking-tight">
           {params.cityName}, {weatherQuery.data.sys.country}
@@ -50,14 +49,14 @@ const CityPage = () => {
       </div>
 
       <div className="grid gap-14">
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-6">
           <CurrentWeather
             data={weatherQuery?.data}
             cityName={params?.cityName}
           />
           <HourlyTemperature data={forecastQuery.data} />
         </div>
-        <div className="grid gap-8 md:grid-cols-2 items-start">
+        <div className="grid gap-6 md:grid-cols-2 items-start">
           <WeatherDetails data={weatherQuery.data} />
           <WeatherForecast data={forecastQuery.data} />
         </div>
